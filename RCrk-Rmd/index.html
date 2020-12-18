@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline:before {
+    content: ' ';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+li.timeline-item {
+    margin: 20px 0;
+}
+
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background: #e8e4c1;
+    background: -webkit-linear-gradient(to right, #e8e4c1, #6497a4);
+    background: linear-gradient(to right, #e8e4c1, #6497a4);
+    min-height: 100vh;
+}
+
+.text-gray {
+    color: #999;
+}
+
+</style>
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>RC-MIM</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="http://data.reynoldscreekczo.org/MIMICS/">RC-MIM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+<!-- Navigation
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+  -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Project Notebooks</h1>
+        <h2 class="h4 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RCrk_MIMICS_progress_overview.html">Progress Summary</a></h2>
+        <ul class="list-unstyled" style="padding-top: 6px;">
+          <li>Last updated: 5 December, 2020</li>
+          <li>derekpierson@isu.edu</li>
+          <li><p class="lead"><a href="https://github.com/piersond/MIMICS-RCrk/tree/sandbox/MIMICS-DP">GitHub Repository</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MIMICS diagram -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="h4 mb-0">MIMICS Diagram</h2>
+            <p>(Note: we're not using the N pool for this project, at the moment...)</p>
+            <img src="images\MIMICS_with_N.png" alt="MIMICS-CN" style="width:50%;">
+        </div>
+      </div>
+    </div>
+
+  <div class="container py-5">
+          <div class="row">
+              <div class="col-lg-7 mx-auto">
+                <h2 class="h4 mb-0">Rmd Notebooks</h2>
+                  <!-- Timeline -->
+                  <ul class="timeline">
+                    <!-- Project overview -->
+                  <!--    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h4 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RCrk_MIMICS_progress_overview.html">Project work overview</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 5 December, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Project summary of key steps and roadblocks in work towards improving MIMICS predictions of SOC at Reynolds Creek.</p>
+                      </li> -->
+                  <!-- SIC stocks -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RC_calc_map_SIC-stocks.html">Reynolds Creek SIC stocks: Data overview</a></h2><span class="small text-gray">
+                              <i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 18 December, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Review and mapping of profile SIC stock data provided in the Reynolds Creek soil datasets from Nick Patton and Chris Stanbery.</p>
+                      </li>
+                  <!-- SOM pools -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RC_soil-C-pools_fieldvMIMICS.html">SOM pools: Field vs. MIMICS</a></h2><span class="small text-gray">
+                              <i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 17 December, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Comparison of soil C pools from Hasini filed data with SOM pools in MIMICS.</p>
+                      </li>
+                  <!-- fMET parameter testing -->
+                     <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                         <div class="timeline-arrow"></div>
+                         <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RC_parameters_fMET.html">fMET control in MIMICS</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 15 December, 2020</span>
+                         <p class="text-small mt-2 font-weight-light">Analysis to determine hwo fMET values influence microbial pools, SOM pools and SOM stocks in MIMICS SOC.</p>
+                     </li>
+                    <!-- Slope & curvature -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/MIMSOC_resids_by_slope-curvature.html">Slope and curvature</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 11 December, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Analysis to determine if slope and/or curvature correlate with residual error in the MIMICS SOC predictions.</p>
+                      </li>
+                    <!-- Hasini data -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/Hasani_Degraff_dataset_overview.html">Hasini & Degraaff data summary</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 7 December, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Overview of RC datasets available from Hasini Delvinne thesis work, provided by Marie-Anne de Graaff. </p>
+                      </li>
+                    <!-- Adding fW to MIMICS -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/Adding_fW_to_MIMICS.html">Adding water constraint to MIMICS</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 30 November, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Add fW variable in MIMICS sandbox code to constrain microbial processing based on water stress.</p>
+                      </li>
+                    <!-- Estimating soil water inputs -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/Estimating_RC_soil_water_inputs.html">Estimating soil water inputs</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 24 November, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Estimate of soil water inputs across Reynolds Creek based on elevation and aspect.</p>
+                      </li>
+                    <!-- Johnston soil moisture -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/JohnstonDraw_soil-moisture.html">Johnston Draw soil moisture data analysis</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 23 November, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Overview of Johnston Draw soil moisture probe data, with emphasis of comparison of between north and south slopes.</p>
+                      </li>
+                    <!-- Reynolds Creek soil moisture -->
+                      <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                          <div class="timeline-arrow"></div>
+                          <h2 class="h5 mb-0"><a href="http://data.reynoldscreekczo.org/MIMICS/RCrk_soil-moisture_vs_precip.html">Reynolds Creek soil moisture data analysis</a></h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></a></a></i>Last updated: 20 November, 2020</span>
+                          <p class="text-small mt-2 font-weight-light">Overview of Reynolds Creek soil moisture probe data and analysis of relationship with mean annual precipitation values.</p>
+                      </li>
+                </ul><!-- End -->
+              </div>
+          </div>
+      </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
